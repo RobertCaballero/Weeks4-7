@@ -33,4 +33,9 @@ public class Flipper : MonoBehaviour
     {
         direction *= -1f;
     }
+
+    public void IncreaseSpeed()
+    {
+        speed++;
+    }
 }
