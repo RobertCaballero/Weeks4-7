@@ -17,17 +17,15 @@ public class GymSpawner : MonoBehaviour
     void Update()
     {
 
-        transform.position = Random.insideUnitCircle * 4;
-
-
     }
 
 
    public void Spawn ()
     {
-        Quaternion originRotation = Quaternion.identity;
 
-        Instantiate(gymSpawner, transform.position, Quaternion.identity);
+        Vector2 spawnPos = Random.insideUnitCircle * 4;
+
+        Instantiate(gymSpawner, spawnPos, Quaternion.identity);
        
     }
 
