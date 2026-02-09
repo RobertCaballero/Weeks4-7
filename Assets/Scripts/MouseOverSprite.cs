@@ -17,7 +17,7 @@ public class MouseOverSprite : MonoBehaviour
     void Update()
     {
         
-        bool mouseCurrentPos = Mouse.current.position.
+      
 
     }
 }
