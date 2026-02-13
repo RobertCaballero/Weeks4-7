@@ -19,12 +19,11 @@ public class BarrelGym : MonoBehaviour
             GameObject currentKnifes = knife[i];
             Debug.Log(currentKnifes);
 
-            GameObject spawnObject = Instantiate(spawnKnifes, transform.position, Quaternion.identity);
-            knife.Add(spawnObject);
-           
+        }
 
 
-        } 
+        GameObject spawnObject = Instantiate(spawnKnifes, transform.position, Quaternion.identity);
+        knife.Add(spawnObject);
     }
 
     // Update is called once per frame
