@@ -20,12 +20,12 @@ public class BarrelGym : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       //for (int i = 0; i < knife.Count; i++)
-       // {
-       //     GameObject currentKnifes = knife[i];
-       //     Debug.Log(currentKnifes);
+        //for (int i = 0; i < currentKnives.Count; i++)
+        //{
+        //    GameObject currentKnifes = Instantiate(spawnKnifes, transform.position, Quaternion.identity); ;
+        //    Debug.Log(currentKnifes);
 
-       // }
+        //}
 
 
         GameObject spawnObject = Instantiate(spawnKnifes, transform.position, Quaternion.identity);
