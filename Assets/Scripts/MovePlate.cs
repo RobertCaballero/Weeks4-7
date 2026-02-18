@@ -1,29 +1,24 @@
 using UnityEngine;
 
-public class Spawning4 : MonoBehaviour
+public class MovePlate : MonoBehaviour
 {
 
-    public GameObject Object4;
-   
-
+    public float speed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        transform.position += transform.right * speed * Time.deltaTime;
 
-    }
 
 
-    public void Spawn()
-    {
-        Instantiate(Object4, transform.position, transform.rotation);
 
     }
 }
