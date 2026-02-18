@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
         transform.position = moveYPos;
 
 
-        if (moveYPos.y < -1f)
+        if (moveYPos.y < -2.5f)
         {
             Destroy(gameObject);
         }
