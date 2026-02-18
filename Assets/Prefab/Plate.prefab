@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8449430557234699818}
   - component: {fileID: 5113824633946769826}
   - component: {fileID: 2325037538308078543}
+  - component: {fileID: 3733794975815020044}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Untagged
@@ -101,3 +102,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &3733794975815020044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106784929063893189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984ef89f517789f4999bb78ca44c3e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 3

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    private float speedY = 1f;
+    private float speedY = 2.5f;
     private float speedX = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,11 +29,11 @@ public class Move : MonoBehaviour
         {
             speedY = 0f;
 
-            speedX = 1f;
-            
+            speedX = 3f;
+
         }
 
-        if (moveXPos.x > 5.5f)
+        if (transform.position.x > 5.5f)
         {
             Destroy(gameObject);
         }
