@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class DespawnPlates : MonoBehaviour
 {
-    public float destroyTime;
-    private float destroyProg;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,11 +14,11 @@ public class DespawnPlates : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x > 5.5f)
+        if (transform.position.x > 5.5f) // If the plate goes beyond x = 5.5, it will be destroyed
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Destroys the plate 
         }
 
-     
+
     }
 }

@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class SpawningPlates : MonoBehaviour
 {
-    public GameObject ObjectPlate;
-    public float waitingTime;
-    private float waitingProg;
-    
-    private float speed = 3f;
+    public GameObject ObjectPlate; // Created a public variable to assign the plate prefab in the Unity editor
+    public float waitingTime; // Time to wait before spawning the next plate
+    private float waitingProg; // Progress of waiting time
+
+    private float speed = 3f; // Speed at which the plates will move
 
 
 
@@ -20,27 +20,25 @@ public class SpawningPlates : MonoBehaviour
     void Update()
     {
 
+        waitingProg += Time.deltaTime; // Increment the waiting progress by each second
 
 
-        waitingProg += Time.deltaTime;
-
-
-        if (waitingProg > waitingTime)
+        if (waitingProg > waitingTime) // Check if the waiting progress is greater that the waiting time
         {
 
-            waitingProg = 0f;
+            waitingProg = 0f; // Reset the waiting progress to 0
 
-            GameObject SpawnedPlate = Instantiate(ObjectPlate, transform.position, Quaternion.identity);
-            MovePlate SpawnedPlates = SpawnedPlate.GetComponent<MovePlate>();
-            SpawnedPlates.speed = speed;
+            GameObject SpawnedPlate = Instantiate(ObjectPlate, transform.position, Quaternion.identity); // Spawn a new plate at the position of the SpawningPlates object with no rotation
+            MovePlate SpawnedPlates = SpawnedPlate.GetComponent<MovePlate>(); // Get the MovePlate component from the spawned plate
+            SpawnedPlates.speed = speed; // Set the speed of the spawned plate to the speed variable defined in this script
 
 
         }
     }
 
-         public void Speed(float value)
+         public void Speed(float value) // Create a public methor to change the speed of the plates with the slider!
     {
-        speed = value;
+        speed = value;// Set the speed value equal to the value of the slider
     }
 
 }
