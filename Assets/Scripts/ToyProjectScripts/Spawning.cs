@@ -5,7 +5,6 @@ public class Spawning : MonoBehaviour
 
     public GameObject Object1;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,8 +21,8 @@ public class Spawning : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(Object1, transform.position, Quaternion.identity);
-
+       Instantiate(Object1, transform.position, Quaternion.identity);
+ 
     }
 
 }

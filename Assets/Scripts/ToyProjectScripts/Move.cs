@@ -5,6 +5,8 @@ public class Move : MonoBehaviour
 
     private float speedY = 2.5f;
     private float speedX = 0f;
+    //private float currentSpeedX = 0f;
+    //private float increaseSpeedX = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +17,8 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+
         Vector3 moveYPos = transform.position;
         moveYPos.y -= speedY * Time.deltaTime;
         transform.position = moveYPos;
@@ -24,12 +27,12 @@ public class Move : MonoBehaviour
         moveXPos.x += speedX * Time.deltaTime;
         transform.position = moveXPos;
 
+        
 
         if (moveYPos.y < -2.5f)
         {
             speedY = 0f;
-
-            speedX = 3f;
+            speedX = 4f;
 
         }
 
@@ -37,5 +40,10 @@ public class Move : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Speed(float value)
+    {
+        speedX = value;
     }
 }

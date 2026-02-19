@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class MovePlate : MonoBehaviour
+public class DespawnPlates : MonoBehaviour
 {
-
-    public float speed;
+    public float destroyTime;
+    private float destroyProg;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,10 +15,11 @@ public class MovePlate : MonoBehaviour
     void Update()
     {
 
-        transform.position += transform.right * speed * Time.deltaTime;
+        if (transform.position.x > 5.5f)
+        {
+            Destroy(gameObject);
+        }
 
-
-
-
+     
     }
 }

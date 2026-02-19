@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
-    public float timerValue = 10;
+    public float timerValue = 6;
     public float timerMinValue = 0;
     private float speed = 1f;
     private float currentSpeed = 1f;
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
 
         if (timerValue < timerMinValue)
         {
-            timerValue = 10;
+            timerValue = 6;
         }
 
         ClockTimer.value = timerValue;
