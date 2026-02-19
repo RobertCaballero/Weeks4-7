@@ -4,7 +4,7 @@ public class Move : MonoBehaviour
 {
 
     private float speedY = 2.5f;
-    private float speedX = 0f;
+    public float speedX = 0f;
     //private float currentSpeedX = 0f;
     //private float increaseSpeedX = 0f;
 
@@ -17,22 +17,26 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
+       
         Vector3 moveYPos = transform.position;
         moveYPos.y -= speedY * Time.deltaTime;
         transform.position = moveYPos;
 
-        Vector3 moveXPos = transform.position;
-        moveXPos.x += speedX * Time.deltaTime;
-        transform.position = moveXPos;
 
-        
+        //Vector3 moveXPos = transform.position;
+        //moveXPos.x += speedX * Time.deltaTime;
+        //transform.position = moveXPos;
+
+
+
 
         if (moveYPos.y < -2.5f)
         {
             speedY = 0f;
-            speedX = 4f;
+
+
+            transform.position += transform.right * speedX * Time.deltaTime;
 
         }
 
@@ -42,8 +46,5 @@ public class Move : MonoBehaviour
         }
     }
 
-    public void Speed(float value)
-    {
-        speedX = value;
-    }
+   
 }

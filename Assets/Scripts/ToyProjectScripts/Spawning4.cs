@@ -4,8 +4,7 @@ public class Spawning4 : MonoBehaviour
 {
 
     public GameObject Object4;
-   
-
+    private float speedX = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,10 +19,17 @@ public class Spawning4 : MonoBehaviour
 
     }
 
-
     public void Spawn()
     {
-        Instantiate(Object4, transform.position, transform.rotation);
 
+        GameObject SpawnFood = Instantiate(Object4, transform.position, Quaternion.identity);
+        Move SpawnFoods = SpawnFood.GetComponent<Move>();
+        SpawnFoods.speedX = speedX;
+
+    }
+
+    public void Speed(float value)
+    {
+        speedX = value;
     }
 }

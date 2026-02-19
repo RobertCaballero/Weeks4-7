@@ -1,11 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RotateHandle : MonoBehaviour
 {
     public GameObject Handle;
     private float rotationSpeed = 100f;
-    private float CurrentRotationSpeed;
+    public float CurrentRotationSpeed;
     private float RotationSpeed = 100f;
+    public Slider RotationSlider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,6 @@ public class RotateHandle : MonoBehaviour
 
     public void Speed(float value)
     {
-        RotationSpeed = RotationSpeed + value;
+        RotationSpeed =  value;
     }
 }

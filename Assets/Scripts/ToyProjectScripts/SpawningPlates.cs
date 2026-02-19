@@ -6,7 +6,7 @@ public class SpawningPlates : MonoBehaviour
     public float waitingTime;
     private float waitingProg;
     
-    private float speed = 1f;
+    private float speed = 3f;
 
 
 
@@ -23,7 +23,7 @@ public class SpawningPlates : MonoBehaviour
 
 
         waitingProg += Time.deltaTime;
-        
+
 
         if (waitingProg > waitingTime)
         {
@@ -31,16 +31,16 @@ public class SpawningPlates : MonoBehaviour
             waitingProg = 0f;
 
             GameObject SpawnedPlate = Instantiate(ObjectPlate, transform.position, Quaternion.identity);
-            MovePlate SpawnedPlates = GetComponent<MovePlate>();
+            MovePlate SpawnedPlates = SpawnedPlate.GetComponent<MovePlate>();
             SpawnedPlates.speed = speed;
 
 
         }
-
-       
-
-        //Destroy(gameObject);
-
-
     }
+
+         public void Speed(float value)
+    {
+        speed = value;
+    }
+
 }
