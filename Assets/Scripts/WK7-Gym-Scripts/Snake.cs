@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
-
+    public Color damageColour;
+    private Color playerColour;
     public int damage;
     public DungeonPlayer player;
 
@@ -24,5 +25,19 @@ public class Snake : MonoBehaviour
     public void ApplyDamage()
     {
         player.TakingDamage(damage);
+    }
+
+    public void ChangePlayerColour()
+    {
+        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        playerColour = playerRenderer.color;
+        playerRenderer.color = damageColour;
+    }
+
+    public void ResetPlayerColour()
+    {
+        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        playerRenderer.color = playerColour;
+
     }
 }

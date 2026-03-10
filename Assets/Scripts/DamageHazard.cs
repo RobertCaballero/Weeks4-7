@@ -4,6 +4,7 @@ public class DamageHazard : MonoBehaviour
 {
     public Color damageColour;
     private Color playerColour;
+    //private float speed = 5f;
 
     public int damage;
     public Player player;
@@ -20,7 +21,8 @@ public class DamageHazard : MonoBehaviour
     void Update()
     {
 
-     
+        //transform.position -= transform.right * speed * Time.deltaTime;
+
 
     }
 
