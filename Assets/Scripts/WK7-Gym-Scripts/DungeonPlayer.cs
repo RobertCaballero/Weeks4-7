@@ -6,6 +6,7 @@ public class DungeonPlayer : MonoBehaviour
     public int Health;
     private float speed = 5f;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,10 +44,11 @@ public class DungeonPlayer : MonoBehaviour
             transform.position -= transform.up * speed * Time.deltaTime;
         }
 
-        if (Health < 0)
-        {
-            Destroy(gameObject);
-        }
+        //if (Health < 0)
+        //{
+        //    Destroy(gameObject);
+
+        //}
 
     }
 

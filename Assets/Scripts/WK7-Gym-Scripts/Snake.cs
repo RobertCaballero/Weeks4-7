@@ -1,9 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
     public Color damageColour;
     private Color playerColour;
+    public Sprite Alive;
+    public Sprite DamageTaken;
+    public Sprite Dead;
     public int damage;
     public DungeonPlayer player;
 
@@ -39,5 +43,31 @@ public class Snake : MonoBehaviour
         SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
         playerRenderer.color = playerColour;
 
+    }
+
+    public void PlayerTakingDamage()
+    {
+        SpriteRenderer playerRenderer = player.GetComponent <SpriteRenderer>();
+        Alive = playerRenderer.sprite;
+        playerRenderer.sprite = DamageTaken;
+
+       
+    }
+
+    public void ResetPlayerSprite()
+    {
+        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        playerRenderer.sprite = Alive;
+
+    }
+
+    public void PlayerDead()
+    {
+
+        if (player.Health < 0)
+        {
+            SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+            playerRenderer.sprite = Dead;
+        }
     }
 }
